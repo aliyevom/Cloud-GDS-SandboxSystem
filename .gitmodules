@@ -1,3 +1,4 @@
 [submodule "IOS-FlightSandboxCross"]
 	path = IOS-FlightSandboxCross
 	url = https://github.com/aliyevom/IOS-FlightSandboxCross.git
+	branch = main
