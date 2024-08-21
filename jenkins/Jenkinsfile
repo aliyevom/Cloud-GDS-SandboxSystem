@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo-url.git'
+                git 'https://github.com/aliyevom/Cloud-GDS-SandboxSystem'
             }
         }
         stage('Build on Xcode Cloud') {
