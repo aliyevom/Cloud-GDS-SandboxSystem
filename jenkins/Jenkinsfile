@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_IMAGE = "gds-image"
+        KUBE_NAMESPACE = "gds"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-repo-url.git'
+            }
+        }
+        stage('Build on Xcode Cloud') {
+            steps {
+                script {
+                    triggerXcodeCloudWorkflow()
+                }
+            }
+        }
+        stage('Test on Xcode Cloud') {
+            steps {
+                // Retrieve and process test results from Xcode Cloud
+            }
+        }
+        stage('Docker Build & Push') {
+            steps {
+                script {
+                    docker.build(DOCKER_IMAGE).push()
+                }
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f kubernetes/'
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
