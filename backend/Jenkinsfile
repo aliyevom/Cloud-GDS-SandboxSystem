@@ -1,0 +1,30 @@
+// Jenkinsfile
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                sh 'python manage.py test'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t backend:latest .'
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                // Example deployment command
+                sh 'kubectl apply -f kubernetes/deployments/backend-deployment.yaml'
+                sh 'kubectl apply -f kubernetes/services/backend-service.yaml'
+            }
+        }
+    }
+}
