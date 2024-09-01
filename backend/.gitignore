@@ -1,0 +1,45 @@
+# Ignore Python virtual environment directories
+venv/
+bin/
+lib/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Django migrations
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.env
+db.sqlite3
+
+# Ignore all MacOS generated files
+.DS_Store
+
+# Ignore IDE configurations
+.idea/
+.vscode/
+
+# Ignore node_modules (if using JavaScript)
+node_modules/
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore Docker related files
+docker-compose.override.yml
+.docker/
+
+# Ignore Kubernetes YAML files
+*.yaml
+*.yml
+
+# Ignore all other operating system files
+*.swp
+*~
