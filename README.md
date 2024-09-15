@@ -1,6 +1,6 @@
 # Aircraft Sandbox Application
 
-![System Architecture]([https://imgtr.ee/images/2024/09/01/696e332e8aa19d8d01fd427a43e9cc13.png](https://raw.githubusercontent.com/aliyevom/Cloud-GDS-SandboxSystem/main/diagram-export-9-1-2024-4_06_29-PM.png))
+![System Architecture](https://github.com/aliyevom/Cloud-GDS-SandboxSystem/blob/main/diagram-export-9-1-2024-4_06_29-PM.png?raw=true)
 
 
 
